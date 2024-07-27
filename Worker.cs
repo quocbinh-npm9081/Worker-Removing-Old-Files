@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -17,7 +17,7 @@ namespace cci.rof
         private IConfiguration _configuration;
         private int _numberOfDaysBeforeDelete;
         private int _runIntervallInHours;
-        private object _folderPaths;
+        private string _folderPath;
 
         public Worker(ILogger<Worker> logger, IServiceScopeFactory serviceScopeFactory)
         {
@@ -30,7 +30,21 @@ namespace cci.rof
             while (!stoppingToken.IsCancellationRequested)
             {
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-                await Task.Delay(1000, stoppingToken);
+
+                if (!stoppingToken.IsCancellationRequested)
+                {
+
+                    //Lấy các danh sách các file tồn tại quá 30 ngày
+                    var files = Directory.GetFiles(_folderPath)
+                        .Select(file => new FileInfo(file))
+                        .Where(file => file.LastWriteTime < DateTime.Now.AddMinutes(-1 * _numberOfDaysBeforeDelete))
+                        .ToList();
+
+                    //Xóa các file đó
+                    files.ForEach(file => file.Delete());
+                }
+
+                await Task.Delay(TimeSpan.FromSeconds(_runIntervallInHours), stoppingToken);
             }
         }
 
@@ -39,11 +53,11 @@ namespace cci.rof
             _configuration = _serviceScopeFactory.CreateScope().
                              ServiceProvider.GetRequiredService<IConfiguration>();
             _numberOfDaysBeforeDelete = int.Parse(_configuration
-                                        ["App.Configurations:NumberOfDaysBeforeDelete"]);
+                                        ["Configurations:NumberOfDaysBeforeDelete"]);
             _runIntervallInHours = int.Parse(_configuration
-                                            ["App.Configurations:RunIntervallInHours"]);
-            _folderPaths = File.ReadAllLines(_configuration
-            ["App.Configurations:ConfigurationFilePath"]).Select(x => x.Trim()).ToList();
+                                            ["Configurations:RunIntervallInHours"]);
+
+            _folderPath = _configuration["Configurations:ConfigurationFilePath"];
 
             return base.StartAsync(cancellationToken);
         }
