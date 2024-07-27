@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "D:\\ConCung\\UAT\\cci.rof\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{78789FBC-000E-40DC-8840-CA746415F866}|cci.rof.csproj|d:\\concung\\uat\\cci.rof\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{78789FBC-000E-40DC-8840-CA746415F866}|cci.rof.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78789FBC-000E-40DC-8840-CA746415F866}|cci.rof.csproj|d:\\concung\\uat\\cci.rof\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{78789FBC-000E-40DC-8840-CA746415F866}|cci.rof.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{78789FBC-000E-40DC-8840-CA746415F866}|cci.rof.csproj|d:\\concung\\uat\\cci.rof\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78789FBC-000E-40DC-8840-CA746415F866}|cci.rof.csproj|solutionrelative:worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,28 +58,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\ConCung\\UAT\\cci.rof\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\ConCung\\UAT\\cci.rof\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-27T08:25:34.777Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "D:\\ConCung\\UAT\\cci.rof\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "D:\\ConCung\\UAT\\cci.rof\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AQIAADoAAAAAAAAAAAAUwEcAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-07-27T08:25:30.962Z",
+              "Title": "Worker.cs",
+              "DocumentMoniker": "D:\\ConCung\\UAT\\cci.rof\\Worker.cs",
+              "RelativeDocumentMoniker": "Worker.cs",
+              "ToolTip": "D:\\ConCung\\UAT\\cci.rof\\Worker.cs",
+              "RelativeToolTip": "Worker.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAuwC4AAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T09:06:06.544Z",
               "EditorCaption": ""
             }
           ]
