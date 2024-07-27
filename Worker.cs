@@ -37,14 +37,14 @@ namespace cci.rof
                     //Lấy các danh sách các file tồn tại quá 30 ngày
                     var files = Directory.GetFiles(_folderPath)
                         .Select(file => new FileInfo(file))
-                        .Where(file => file.LastWriteTime < DateTime.Now.AddMinutes(-1 * _numberOfDaysBeforeDelete))
+                        .Where(file => file.LastWriteTime < DateTime.Now.AddDays(-1 * _numberOfDaysBeforeDelete))
                         .ToList();
 
                     //Xóa các file đó
                     files.ForEach(file => file.Delete());
                 }
 
-                await Task.Delay(TimeSpan.FromSeconds(_runIntervallInHours), stoppingToken);
+                await Task.Delay(TimeSpan.FromHours(_runIntervallInHours), stoppingToken);
             }
         }
 

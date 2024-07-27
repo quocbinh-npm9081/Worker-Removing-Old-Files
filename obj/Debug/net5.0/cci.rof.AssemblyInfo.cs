@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cci.rof")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+656f4b93fa75e7f6bf5223a866beca77581d2882")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26b410233809155bcd47d87ebfcbe240f6305214")]
 [assembly: System.Reflection.AssemblyProductAttribute("cci.rof")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cci.rof")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
